@@ -15,7 +15,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
         h1 {
@@ -25,22 +25,6 @@
         p {
             font-size: 1.5rem;
             margin: 1em;
-        }
-        .balloons {
-            margin-top: 1em;
-        }
-        img {
-            width: 100px;
-            margin: 0 10px;
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
         }
         .letter-section, .pictures-section {
             width: 80%;
@@ -53,19 +37,26 @@
         }
         .pictures-section img {
             width: 200px;
+            height: 200px;
+            object-fit: cover;
             margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .video-section iframe {
+            width: 560px;
+            height: 315px;
         }
     </style>
 </head>
 <body>
-    <h1>Happy Birthday!</h1>
-    <p>Wishing you a day filled with love, laughter, and all your favorite things!</p>
-    <div class="balloons">
-        <img src="https://img.icons8.com/color/100/balloon.png" alt="Balloon">
-        <img src="https://img.icons8.com/color/100/balloon.png" alt="Balloon">
-        <img src="https://img.icons8.com/color/100/balloon.png" alt="Balloon">
-    </div>
-
     <div class="letter-section">
         <h2>A Special Letter for You</h2>
         <p>Dear Elysian,</p>
@@ -91,23 +82,10 @@ On your birthday, I hope you know how loved and appreciated you are not just by 
         <img src="https://assets.onecompiler.app/432qw7q32/432qpwjpm/462579705_928898878854121_5764835672934544957_n.jpg" alt="Memory 9">
         <img src="https://assets.onecompiler.app/432qw7q32/432qpwjpm/462567164_9046637785442241_7060100619989679591_n.jpg" alt="Memory 10">
     </div>
-     <style>
-        img {
-            width: 200px; /* Set the desired width */
-            height: 200px; /* Set the desired height */
-            object-fit: cover; /* Ensures images are scaled and cropped to fit */
-            margin: 5px; /* Optional: adds spacing between images */
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-    </style>
+
     <div class="video-section">
         <h2>A Special Birthday Video</h2>
-        <iframe src="https://assets.onecompiler.app/432qw7q32/432qpwjpm/470976286_9088262347936660_3717524618467612184_n.mp4" title="Birthday Video"></iframe>
+        <iframe width="560" height="315" src="https://assets.onecompiler.app/432qw7q32/432qpwjpm/470976286_9088262347936660_3717524618467612184_n.mp4" title="Birthday Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    
 </body>
 </html>
